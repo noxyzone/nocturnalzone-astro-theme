@@ -1,0 +1,55 @@
+---
+import SiteLayout from "../theme/layouts/SiteLayout.astro";
+import Button from "../theme/components/Button.astro";
+import Badge from "../theme/components/Badge.astro";
+import Card from "../theme/components/Card.astro";
+---
+
+<SiteLayout
+  title="NocturnalZone"
+  description="A quiet, editorial Astro theme for technical notes, directories, and product pages."
+>
+  <section class="nz-hero nz-container">
+    <div>
+      <p class="nz-eyebrow">Astro Theme</p>
+      <h1 class="nz-hero__title">Quiet tools for careful publishing.</h1>
+      <p class="nz-hero__body">
+        NocturnalZone is a restrained Astro starter with tonal layering, editorial type, glass navigation,
+        reusable components, and a palette drawn from the NocturnalZone design system.
+      </p>
+      <div class="nz-actions">
+        <Button href="/components">View components</Button>
+        <Button href="/blog" variant="secondary">Read sample notes</Button>
+      </div>
+    </div>
+  </section>
+
+  <section class="nz-section nz-container">
+    <p class="nz-eyebrow">Foundation</p>
+    <div class="nz-grid">
+      <Card title="Design tokens">
+        <p>Dark and light color schemes are driven by CSS custom properties, keeping the theme portable.</p>
+      </Card>
+      <Card title="Editorial rhythm">
+        <p>Large headings, measured body text, and generous section spacing create a calm reading surface.</p>
+      </Card>
+      <Card title="Reusable parts">
+        <p>Layouts, SEO head, buttons, badges, cards, tables, forms, and prose styles live under <code>src/theme</code>.</p>
+      </Card>
+    </div>
+  </section>
+
+  <section class="nz-section nz-container nz-container--narrow">
+    <p class="nz-eyebrow">Use Cases</p>
+    <h2 class="nz-section-title">Built for content, catalogs, and compact product pages.</h2>
+    <p class="nz-page-intro">
+      The sample pages cover a normal theme gallery: homepage, blog, components, pricing, and a directory layout.
+    </p>
+    <div class="nz-actions">
+      <Badge variant="accent">Dark-first</Badge>
+      <Badge>Light mode</Badge>
+      <Badge>Static output</Badge>
+      <Badge>SEO head</Badge>
+    </div>
+  </section>
+</SiteLayout>

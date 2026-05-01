@@ -1,0 +1,42 @@
+---
+import SiteLayout from "../theme/layouts/SiteLayout.astro";
+import Card from "../theme/components/Card.astro";
+
+const posts = [
+  {
+    title: "Designing with tonal depth",
+    href: "/blog/sample-post",
+    summary: "A short note on using background shifts instead of hard borders.",
+    date: "May 1, 2026",
+  },
+  {
+    title: "A quiet directory pattern",
+    href: "/directory",
+    summary: "How product lists can stay dense without becoming visually noisy.",
+    date: "Apr 28, 2026",
+  },
+  {
+    title: "Pricing tables without chrome",
+    href: "/pricing",
+    summary: "Using restrained contrast, spacing, and states for commercial pages.",
+    date: "Apr 24, 2026",
+  },
+];
+---
+
+<SiteLayout title="Blog" description="Sample editorial list page for the NocturnalZone Astro theme.">
+  <section class="nz-container nz-container--narrow">
+    <p class="nz-eyebrow">Notes</p>
+    <h1 class="nz-page-title">Writing with a quieter surface.</h1>
+    <p class="nz-page-intro">A standard blog index for testing post cards, metadata, summaries, and link hierarchy.</p>
+  </section>
+
+  <section class="nz-section nz-container nz-container--narrow nz-stack">
+    {posts.map((post) => (
+      <Card title={post.title} href={post.href}>
+        <p class="nz-eyebrow">{post.date}</p>
+        <p>{post.summary}</p>
+      </Card>
+    ))}
+  </section>
+</SiteLayout>

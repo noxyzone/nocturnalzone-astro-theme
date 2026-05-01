@@ -1,0 +1,20 @@
+---
+interface Props {
+  title?: string;
+  href?: string;
+}
+
+const { title, href } = Astro.props;
+const TitleTag = href ? "a" : "span";
+---
+
+<article class="nz-card">
+  {title && (
+    <h2 class="nz-card__title">
+      <TitleTag href={href}>{title}</TitleTag>
+    </h2>
+  )}
+  <div class="nz-card__body">
+    <slot />
+  </div>
+</article>

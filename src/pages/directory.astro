@@ -1,0 +1,52 @@
+---
+import SiteLayout from "../theme/layouts/SiteLayout.astro";
+import Badge from "../theme/components/Badge.astro";
+import Card from "../theme/components/Card.astro";
+
+const items = [
+  { name: "Graphlane", category: "Analytics", status: "New", summary: "A focused dashboard for editorial operations." },
+  { name: "Signal Desk", category: "Research", status: "Stable", summary: "A compact workspace for source tracking." },
+  { name: "Field Notes", category: "Writing", status: "Beta", summary: "A lightweight journal and publishing pipeline." },
+  { name: "North Star", category: "Planning", status: "Stable", summary: "A planning surface for small product teams." },
+];
+---
+
+<SiteLayout title="Directory" description="Sample directory page for the NocturnalZone Astro theme.">
+  <section class="nz-container">
+    <p class="nz-eyebrow">Directory</p>
+    <h1 class="nz-page-title">A catalog layout for product lists.</h1>
+    <p class="nz-page-intro">This page mirrors the structure needed by comparison sites without binding the theme to one data source.</p>
+  </section>
+
+  <section class="nz-section nz-container">
+    <table class="nz-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Status</th>
+          <th>Summary</th>
+        </tr>
+      </thead>
+      <tbody>
+        {items.map((item) => (
+          <tr>
+            <td>{item.name}</td>
+            <td>{item.category}</td>
+            <td><Badge variant={item.status === "New" ? "accent" : "default"}>{item.status}</Badge></td>
+            <td>{item.summary}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+
+  <section class="nz-section nz-container nz-grid">
+    {items.map((item) => (
+      <Card title={item.name}>
+        <p class="nz-eyebrow">{item.category}</p>
+        <p>{item.summary}</p>
+      </Card>
+    ))}
+  </section>
+</SiteLayout>

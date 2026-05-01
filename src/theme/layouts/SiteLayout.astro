@@ -1,0 +1,54 @@
+---
+import "../styles/theme.css";
+import SeoHead from "../components/SeoHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface NavItem {
+  href: string;
+  label: string;
+}
+
+interface Props {
+  title: string;
+  description?: string;
+  siteName?: string;
+  canonical?: string;
+  image?: string;
+  type?: "website" | "article";
+  navItems?: NavItem[];
+}
+
+const {
+  title,
+  description,
+  siteName = "NocturnalZone",
+  canonical,
+  image,
+  type = "website",
+  navItems,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SeoHead
+      title={title}
+      description={description}
+      siteName={siteName}
+      canonical={canonical}
+      image={image}
+      type={type}
+    />
+  </head>
+  <body>
+    <div class="nz-shell">
+      <Header siteName={siteName} navItems={navItems} />
+      <main class="nz-main">
+        <slot />
+      </main>
+      <Footer siteName={siteName} />
+    </div>
+  </body>
+</html>

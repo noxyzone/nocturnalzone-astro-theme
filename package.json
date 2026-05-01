@@ -1,0 +1,31 @@
+{
+  "name": "nocturnalzone-astro-theme",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A quiet Astro starter for editorial sites, product directories, and technical notes.",
+  "license": "MIT",
+  "homepage": "https://github.com/noxyzone/nocturnalzone-astro-theme#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noxyzone/nocturnalzone-astro-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/noxyzone/nocturnalzone-astro-theme/issues"
+  },
+  "keywords": [
+    "astro",
+    "astro-theme",
+    "astro-starter",
+    "dark-theme",
+    "editorial",
+    "directory"
+  ],
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^6.2.1"
+  }
+}

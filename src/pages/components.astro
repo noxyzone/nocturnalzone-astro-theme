@@ -1,0 +1,55 @@
+---
+import SiteLayout from "../theme/layouts/SiteLayout.astro";
+import Button from "../theme/components/Button.astro";
+import Badge from "../theme/components/Badge.astro";
+import Card from "../theme/components/Card.astro";
+---
+
+<SiteLayout title="Components" description="Component gallery for the NocturnalZone Astro theme.">
+  <section class="nz-container">
+    <p class="nz-eyebrow">Gallery</p>
+    <h1 class="nz-page-title">Theme components.</h1>
+    <p class="nz-page-intro">A compact reference for the reusable UI pieces included in the starter.</p>
+  </section>
+
+  <section class="nz-section nz-container nz-grid">
+    <Card title="Buttons">
+      <div class="nz-actions">
+        <Button href="#">Primary action</Button>
+        <Button href="#" variant="secondary">Secondary</Button>
+      </div>
+    </Card>
+
+    <Card title="Badges">
+      <div class="nz-actions">
+        <Badge variant="accent">Featured</Badge>
+        <Badge>Stable</Badge>
+        <Badge>Static</Badge>
+      </div>
+    </Card>
+
+    <Card title="Form">
+      <div class="nz-stack">
+        <label class="nz-field">
+          <span class="nz-label">Project name</span>
+          <input class="nz-input" value="NocturnalZone" />
+        </label>
+        <label class="nz-field">
+          <span class="nz-label">Focus</span>
+          <select class="nz-input">
+            <option>Editorial</option>
+            <option>Directory</option>
+            <option>Product</option>
+          </select>
+        </label>
+      </div>
+    </Card>
+  </section>
+
+  <section class="nz-section nz-container nz-container--narrow">
+    <div class="nz-notice">
+      <strong>Notice component</strong>
+      <p>Use notices for short callouts without creating a full card inside another card.</p>
+    </div>
+  </section>
+</SiteLayout>

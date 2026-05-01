@@ -1,0 +1,75 @@
+:root {
+  color-scheme: dark light;
+
+  --nz-bg-primary: #000000;
+  --nz-bg-sunken: #0e0e12;
+  --nz-bg-secondary: #18181d;
+  --nz-bg-tertiary: #2c2c2e;
+
+  --nz-separator: #3a3a3c;
+  --nz-separator-subtle: #3a3a3c33;
+  --nz-separator-ghost: #3a3a3c1a;
+
+  --nz-label-primary: #b0b4be;
+  --nz-label-secondary: #a9a9b3;
+  --nz-label-tertiary: #919198;
+  --nz-label-quaternary: #636366;
+  --nz-label-code: #9d9da6;
+
+  --nz-tint: #007acc;
+  --nz-tint-hover: #005fa3;
+  --nz-tint-pressed: #005a96;
+  --nz-tint-bright: #79c0dc;
+  --nz-tint-subtle: #007acc26;
+  --nz-link: #79c0dc;
+
+  --nz-success: #3fb085;
+  --nz-warning: #d6c95f;
+  --nz-error: #ff7a9e;
+  --nz-modified: #f4a823;
+
+  --nz-font-sans:
+    "Inter", "Hiragino Sans", "Yu Gothic", "Segoe UI", system-ui, sans-serif;
+  --nz-font-mono:
+    "SFMono-Regular", "SF Mono", Consolas, "Liberation Mono", monospace;
+
+  --nz-radius-sm: 0.375rem;
+  --nz-radius-md: 0.75rem;
+  --nz-radius-lg: 1.5rem;
+
+  --nz-container: 70rem;
+  --nz-container-narrow: var(--nz-container);
+
+  --nz-motion: 200ms ease-out;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --nz-bg-primary: #ebebed;
+    --nz-bg-sunken: #f5f5f7;
+    --nz-bg-secondary: #ffffff;
+    --nz-bg-tertiary: #e0e0e3;
+
+    --nz-separator: #c7c7cc;
+    --nz-separator-subtle: #c7c7cc33;
+    --nz-separator-ghost: #c7c7cc1a;
+
+    --nz-label-primary: #1c1c1e;
+    --nz-label-secondary: #3a3a3c;
+    --nz-label-tertiary: #696970;
+    --nz-label-quaternary: #aeaeb2;
+    --nz-label-code: #515154;
+
+    --nz-tint: #005a99;
+    --nz-tint-hover: #004880;
+    --nz-tint-pressed: #003d6b;
+    --nz-tint-bright: #006894;
+    --nz-tint-subtle: #005a9926;
+    --nz-link: #006894;
+
+    --nz-success: #267653;
+    --nz-warning: #746600;
+    --nz-error: #c2305c;
+    --nz-modified: #905f00;
+  }
+}
