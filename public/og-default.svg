@@ -1,0 +1,33 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1200 630"
+  role="img"
+  aria-label="NocturnalZone Astro Theme"
+>
+  <rect width="1200" height="630" fill="#000000" />
+  <circle cx="600" cy="0" r="360" fill="#007acc" opacity=".18" />
+  <rect x="96" y="96" width="1008" height="438" rx="32" fill="#18181d" />
+  <text
+    x="136"
+    y="260"
+    fill="#b0b4be"
+    font-family="Inter, system-ui, sans-serif"
+    font-size="72"
+    font-weight="800"
+  >NocturnalZone</text>
+  <text
+    x="136"
+    y="344"
+    fill="#79c0dc"
+    font-family="Inter, system-ui, sans-serif"
+    font-size="44"
+    font-weight="700"
+  >Astro Theme</text>
+  <text
+    x="136"
+    y="424"
+    fill="#a9a9b3"
+    font-family="Inter, system-ui, sans-serif"
+    font-size="30"
+  >Quiet tools for careful publishing.</text>
+</svg>

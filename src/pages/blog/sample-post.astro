@@ -1,0 +1,38 @@
+---
+import SiteLayout from "../../theme/layouts/SiteLayout.astro";
+import Badge from "../../theme/components/Badge.astro";
+---
+
+<SiteLayout
+  title="Designing with tonal depth"
+  description="A sample article page for the NocturnalZone Astro theme."
+  type="article"
+>
+  <article class="nz-container nz-container--narrow">
+    <p class="nz-eyebrow">May 1, 2026</p>
+    <h1 class="nz-page-title">Designing with tonal depth.</h1>
+    <div class="nz-actions">
+      <Badge variant="accent">Design</Badge>
+      <Badge>Astro</Badge>
+    </div>
+
+    <div class="nz-prose nz-section">
+      <p>
+        NocturnalZone uses tonal changes instead of heavy outlines. A surface should feel like a shift in light,
+        not a box drawn around content.
+      </p>
+      <h2>Surfaces</h2>
+      <p>
+        Cards and panels use <code>--nz-bg-secondary</code> and move toward <code>--nz-bg-tertiary</code> on hover.
+        This keeps the interface quiet while still providing interaction feedback.
+      </p>
+      <blockquote>
+        The theme avoids hard page-section borders. Spacing and background tone carry the structure.
+      </blockquote>
+      <h2>Typography</h2>
+      <p>
+        Large headings do the expressive work. Body text stays readable, secondary, and calm.
+      </p>
+    </div>
+  </article>
+</SiteLayout>

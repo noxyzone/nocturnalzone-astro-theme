@@ -1,0 +1,10 @@
+---
+interface Props {
+  variant?: "default" | "accent";
+}
+
+const { variant = "default" } = Astro.props;
+const className = variant === "accent" ? "nz-badge nz-badge--accent" : "nz-badge";
+---
+
+<span class={className}><slot /></span>

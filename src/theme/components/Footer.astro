@@ -1,0 +1,18 @@
+---
+interface Props {
+  siteName?: string;
+  note?: string;
+}
+
+const {
+  siteName = "NocturnalZone",
+  note = "A quiet Astro theme for deliberate web publishing.",
+} = Astro.props;
+---
+
+<footer class="nz-footer">
+  <div class="nz-footer__inner nz-container">
+    <p>{siteName}</p>
+    <p>{note}</p>
+  </div>
+</footer>

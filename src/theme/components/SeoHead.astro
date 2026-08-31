@@ -1,0 +1,40 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  siteName?: string;
+  canonical?: string;
+  image?: string;
+  type?: "website" | "article";
+}
+
+const {
+  title,
+  description = "A quiet, editorial Astro theme for technical notes, directories, and product pages.",
+  siteName = "NocturnalZone",
+  canonical,
+  image = "/og-default.svg",
+  type = "website",
+} = Astro.props;
+
+const pageTitle = title === siteName ? title : `${title} | ${siteName}`;
+const canonicalUrl = canonical ?? Astro.url.href;
+const imageUrl = new URL(image, Astro.site ?? Astro.url).href;
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalUrl} />
+<title>{pageTitle}</title>
+<meta property="og:type" content={type} />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:image" content={imageUrl} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={pageTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageUrl} />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />

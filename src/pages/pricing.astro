@@ -1,0 +1,35 @@
+---
+import SiteLayout from "../theme/layouts/SiteLayout.astro";
+import Button from "../theme/components/Button.astro";
+import Badge from "../theme/components/Badge.astro";
+import Card from "../theme/components/Card.astro";
+
+const tiers = [
+  { name: "Solo", price: "$19", badge: "Start", features: ["One project", "Theme components", "Static output"] },
+  { name: "Studio", price: "$49", badge: "Popular", features: ["Five projects", "Directory layouts", "Priority updates"] },
+  { name: "Archive", price: "$99", badge: "Scale", features: ["Unlimited projects", "Custom content types", "Launch support"] },
+];
+---
+
+<SiteLayout title="Pricing" description="Sample pricing page for the NocturnalZone Astro theme.">
+  <section class="nz-container nz-container--narrow">
+    <p class="nz-eyebrow">Pricing</p>
+    <h1 class="nz-page-title">Commercial pages without visual noise.</h1>
+    <p class="nz-page-intro">A sample pricing layout for product and SaaS-style pages.</p>
+  </section>
+
+  <section class="nz-section nz-container nz-grid">
+    {tiers.map((tier) => (
+      <Card title={tier.name}>
+        <div class="nz-stack">
+          <Badge variant={tier.badge === "Popular" ? "accent" : "default"}>{tier.badge}</Badge>
+          <p class="nz-section-title">{tier.price}<span style="font-size: 1rem; color: var(--nz-label-tertiary);"> / month</span></p>
+          <ul>
+            {tier.features.map((feature) => <li>{feature}</li>)}
+          </ul>
+          <Button href="#" variant={tier.badge === "Popular" ? "primary" : "secondary"}>Choose {tier.name}</Button>
+        </div>
+      </Card>
+    ))}
+  </section>
+</SiteLayout>
