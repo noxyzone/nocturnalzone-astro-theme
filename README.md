@@ -30,6 +30,19 @@ npm run preview
 checks and writes the production output to `dist/`, and `npm run preview` serves
 that built output locally before deployment.
 
+## Screenshots
+
+`images/screenshot.png` (1600x900) is regenerated from the local dev server with headless Chrome:
+
+```bash
+npm install
+scripts/screenshot.sh
+```
+
+Pass `--output-dir DIR` to write the image outside `images/`, or `--port PORT` to use a
+different dev server port. The script only needs `npm install` and Google Chrome, and it
+never overwrites the tracked image unless it writes to the default directory.
+
 ## Included
 
 - CSS-variable theme tokens with dark and light color schemes
